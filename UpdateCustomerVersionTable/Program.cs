@@ -82,13 +82,13 @@ namespace UpdateCustomerVersionTable
                     Console.WriteLine();
                     string message = updatedRows + (updatedRows == 1 ? " row is " : " rows are ") + "updated in table CustmerVersion.";
                     Console.WriteLine(message);
-                }
+                }    
                 catch (Exception ex)
                 {
                     Console.WriteLine("Commit Exception Type: {0}", ex.GetType());
                     Console.WriteLine("  Message: {0}", ex.Message);
-
-                    // Attempt to roll back the transaction.
+                       
+                    // Attempt to roll back the transaction.  
                     try
                     {
                         transaction.Rollback();
